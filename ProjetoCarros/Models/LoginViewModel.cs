@@ -1,4 +1,4 @@
-﻿namespace ProjetoCarrosEletricos.Models
+﻿namespace ProjetoCarros.Models
 {
     public class Usuario
     {
