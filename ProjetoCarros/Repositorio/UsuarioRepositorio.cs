@@ -53,6 +53,8 @@ namespace ProjetoCarros.Repositorio
             cmd.Parameters.AddWithValue("@nivel", "Usuario");
             cmd.ExecuteNonQuery();
         }
+
+        //Metodo para fazer a exclusão de conta
         public void DeletarConta(int id)
         {
             using var conn = new MySqlConnection(_connectionString);
@@ -63,6 +65,31 @@ namespace ProjetoCarros.Repositorio
             cmd.Parameters.AddWithValue("@id", id);
 
             cmd.ExecuteNonQuery();
+        }
+        //Metodo para buscar o usuario por Id
+        public Usuario BuscarPorId(int id)
+        {
+            using var conn = new MySqlConnection(_connectionString);
+            conn.Open();
+            var sql = "SELECT *FROM tb_usuario WHERE Id=@id";
+            using var cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            using var reader = cmd.ExecuteReader();
+
+            if(reader.Read())
+            {
+                return new Usuario
+                {
+                    Id = Convert.ToInt32(reader["Id"]),
+                    Nome = reader["Nome"].ToString()!,
+                    Email = reader["Email"].ToString()!,
+                    Senha = reader["Senha"].ToString()!,
+                    Nivel = reader["Nivel"].ToString()!,
+                };
+            }
+
+            return null;
         }
     }
 }

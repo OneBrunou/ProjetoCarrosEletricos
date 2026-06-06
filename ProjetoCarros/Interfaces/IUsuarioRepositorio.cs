@@ -6,5 +6,6 @@ namespace ProjetoCarros.Interfaces
     {
         Usuario Validar(string email, string senha);
         void CriarConta(Usuario usuario);
+        void DeletarConta(int id);
     }
 }
