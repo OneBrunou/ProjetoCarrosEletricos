@@ -10,8 +10,4 @@
         public string Nivel { get; set; } = "Usuario";
     }
 
-    public class ConfirmarExclusao
-    {
-        public string Senha { get; set; }
-    }
 }
