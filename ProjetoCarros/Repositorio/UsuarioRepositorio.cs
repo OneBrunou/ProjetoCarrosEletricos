@@ -53,5 +53,16 @@ namespace ProjetoCarros.Repositorio
             cmd.Parameters.AddWithValue("@nivel", "Usuario");
             cmd.ExecuteNonQuery();
         }
+        public void DeletarConta(int id)
+        {
+            using var conn = new MySqlConnection(_connectionString);
+            conn.Open();
+
+            var sql = "DELETE FROM tb_usuario WHERE Id=@id";
+            using var cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            cmd.ExecuteNonQuery();
+        }
     }
 }
