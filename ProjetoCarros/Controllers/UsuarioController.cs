@@ -50,14 +50,11 @@ namespace ProjetoCarros.Controllers
             return RedirectToAction("Logar");
         }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 08db5b8cb96c790dd0e3abeb6edf961de70a31fb
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> DeletarConta()
+        public async Task<IActionResult> DeletarConta(ConfirmarExclusaoViewModel model)
         {
             var usuarioIdClaim = User.FindFirst("UsuarioId");
 
@@ -66,11 +63,29 @@ namespace ProjetoCarros.Controllers
                 return RedirectToAction("Logar");
             }
             int usuarioId = int.Parse(usuarioIdClaim.Value);
+
+            var usuario = _usuarioRepositorio.BuscarPorId(usuarioId);
+
+            if(usuario==null)
+            {
+                return RedirectToAction("Logar");
+            }
+           
+            bool senhaValida = BCrypt.Net.BCrypt.Verify(model.Senha,usuario.Senha);
+
+            if(!senhaValida)
+            {
+                ModelState.AddModelError("", "Senha Incorreta.");
+                return View(model);
+            }
             _usuarioRepositorio.DeletarConta(usuarioId);
+
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
             return RedirectToAction("Logar");
         }
+
+        
 
         public IActionResult Index()
         {
