@@ -50,6 +50,10 @@ namespace ProjetoCarros.Controllers
             return RedirectToAction("Logar");
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08db5b8cb96c790dd0e3abeb6edf961de70a31fb
         [HttpPost]
         [ValidateAntiForgeryToken]
 

@@ -54,7 +54,9 @@ namespace ProjetoCarros.Repositorio
             cmd.ExecuteNonQuery();
         }
 
+
         //Metodo para fazer a exclusão de conta
+
         public void DeletarConta(int id)
         {
             using var conn = new MySqlConnection(_connectionString);
@@ -91,5 +93,6 @@ namespace ProjetoCarros.Repositorio
 
             return null;
         }
+
     }
 }
