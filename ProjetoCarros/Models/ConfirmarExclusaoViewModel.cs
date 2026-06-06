@@ -2,5 +2,6 @@
 {
     public class ConfirmarExclusaoViewModel
     {
+        public string Senha { get; set; }
     }
 }
