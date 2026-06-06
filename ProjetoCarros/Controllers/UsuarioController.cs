@@ -49,6 +49,26 @@ namespace ProjetoCarros.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Logar");
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> DeletarConta()
+        {
+            var usuarioIdClaim = User.FindFirst("UsuarioId");
+
+            if(usuarioIdClaim==null)
+            {
+                return RedirectToAction("Logar");
+            }
+            int usuarioId = int.Parse(usuarioIdClaim.Value);
+            _usuarioRepositorio.DeletarConta(usuarioId);
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return RedirectToAction("Logar");
+        }
+
         public IActionResult Index()
         {
             return View();
