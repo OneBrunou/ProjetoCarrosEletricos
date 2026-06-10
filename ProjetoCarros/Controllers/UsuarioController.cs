@@ -93,5 +93,9 @@ namespace ProjetoCarros.Controllers
         {
             return View();
         }
+        public IActionResult Configuracoes()
+        {
+            return View();
+        }
     }
 }

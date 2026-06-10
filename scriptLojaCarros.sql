@@ -103,7 +103,7 @@ delimiter ;
 
 -- acessos para os admins
 insert into tb_usuario (Nome, Email, Senha, Nivel)
-values ('adimin','adm@email.com','123','Admin');
+values ('adimin','adm@email.com','$2a$11$xa4QYUU.pOHnXtSHss/kRuT.iDy3g6L62YGhpPZUCy3lkqxJ.lZ0O','Admin');
 
 insert into tb_usuario (Nome, Email, Senha, Nivel)
 values ('devB','oneadm@email.com','@@..', 'Admin');
@@ -111,3 +111,4 @@ values ('devB','oneadm@email.com','@@..', 'Admin');
 
 select*from tb_usuario;
 select*from tb_usuario_apagado;
+
