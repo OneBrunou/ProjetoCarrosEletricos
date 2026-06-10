@@ -56,6 +56,12 @@ namespace ProjetoCarros.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Logar");
         }
+
+        [HttpGet]
+        public  IActionResult DeletarConta()
+        {
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeletarConta(ConfirmarExclusaoViewModel model)
