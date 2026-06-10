@@ -23,3 +23,43 @@ body {
 .navbar {
     min-height: 80px;
 }
+body {
+    background-color: white;
+}
+.footer {
+    margin-top: auto;
+    font-family: Arial, sans-serif;
+}
+
+.footer-top {
+    background: #000;
+    color: #fff;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .footer-top img {
+        height: 75px;
+    }
+
+.footer-bottom {
+    background: #efefef;
+    padding: 24px 32px;
+    font-size: 14px;
+    color: #666;
+}
+
+    .footer-bottom a {
+        color: #666;
+        text-decoration: none;
+    }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+
+.empresa {
+    margin-left: 8px;
+}

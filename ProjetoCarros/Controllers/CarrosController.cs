@@ -16,7 +16,7 @@ namespace ProjetoCarros.Controllers
         {
             return View();
         }
-        public IActionResult TodosOsModelos()
+        public IActionResult TodosModelos()
         {
             return View();
         }

@@ -39,9 +39,9 @@
                                 Modelos
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark border-0 rounded-0 border-top border-white border-2 mt-0" style="background-color: black;">
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Todos os Modelos</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Elétricos</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Híbrido</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Carros" asp-action="TodosModelos">Todos os Modelos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Carros" asp-action="CarrosEletricos">Elétricos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Carros" asp-action="CarrosHibridos">Híbrido</a></li>
                             </ul>
                         </li>
 
@@ -51,8 +51,8 @@
                                 Estoque
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark border-0 rounded-0 border-top border-white border-2 mt-0" style="background-color: black;">
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Novos</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Seminovos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Carros" asp-action="Novos">Novos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Carros" asp-action="Seminovos">Seminovos</a></li>
                             </ul>
                         </li>
 
@@ -107,9 +107,15 @@
             @RenderBody()
         </main>
     </div>
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - ProjetoCarros - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer">
+        <div class="footer-top">
+            <span>© 2026 - ProjetoCarros</span>
+
+            <a href="/">
+                <img src="~/images/Logo.png"
+                     alt="Projeto Carros"
+                     class="footer-logo">
+            </a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
