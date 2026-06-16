@@ -11,6 +11,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 });
 
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<ICarroRepositorio, CarroRepositorio>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

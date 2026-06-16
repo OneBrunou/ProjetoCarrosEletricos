@@ -45,6 +45,8 @@ Marca enum (
 'Ford',
 'Volkswagen'
 ),
+Descricao TEXT,
+Imagem varchar(250),
 Categoria enum('BEV','FCEV','PHEV','HEV','MHEV') not null,
 Preco decimal (10,2) not null,
 Data_cadastro datetime default current_timestamp
