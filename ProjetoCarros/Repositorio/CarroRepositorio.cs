@@ -59,7 +59,7 @@ namespace ProjetoCarros.Repositorio
             using var conn = new MySqlConnection(_connectionString);
             conn.Open();
 
-            var sql = @"INSERT INTO tb_carros(Nome_carro,Marca,Descicao,Imagem Categoria, Preco) VALUES (@nome, @marca, @descricao, @imagem, @categoria, @preco";
+            var sql = @"INSERT INTO tb_carros(Nome_carro,Marca,Descricao,Imagem, Categoria, Preco) VALUES (@nome, @marca, @descricao, @imagem, @categoria, @preco)";
             using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@nome", carro.Nome);
             cmd.Parameters.AddWithValue("@marca", carro.Marca);

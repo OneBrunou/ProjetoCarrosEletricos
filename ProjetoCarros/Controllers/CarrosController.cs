@@ -31,7 +31,7 @@ namespace ProjetoCarros.Controllers
         public IActionResult CarrosEletricos()
         {
             var eletricos = _carroRepositorio.ListarTodos()
-                .Where(c => c.Categoria == "BEV" || c.Categoria == "FCEN")
+                .Where(c => c.Categoria == "BEV" || c.Categoria == "FCEV")
                 .ToList();
             return View(eletricos);
         }
@@ -48,9 +48,12 @@ namespace ProjetoCarros.Controllers
             var carros = _carroRepositorio.ListarTodos();
                 return View(carros);
         }
-
         [Authorize]
         [HttpGet]
+        public IActionResult Cria() => View();
+
+        [Authorize]
+        [HttpPost]
         public IActionResult Criar( Carro model, IFormFile? imagem)
         {
             if (User.FindFirst("NivelAcesso")?.Value != "Admin")
@@ -83,7 +86,7 @@ namespace ProjetoCarros.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Editar(Carro model, IFormFile? imagem)
         {
-            if (User.FindFirst("NIvelAcesso")?.Value != "Admin")
+            if (User.FindFirst("NivelAcesso")?.Value != "Admin")
                 return RedirectToAction("AcessoNegado");
 
             if (!ModelState.IsValid) 
