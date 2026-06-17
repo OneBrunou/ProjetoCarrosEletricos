@@ -112,7 +112,7 @@ namespace ProjetoCarros.Controllers
 
         public IActionResult AcessoNegado() => View();
 
-        public IActionResult TodosOsModelos()
+        public IActionResult TodosModelos()
         {
             return View();
         }
