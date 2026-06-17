@@ -79,6 +79,12 @@
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Modelo">Contato</a></li>
                             </ul>
                         </li>
+                        <a asp-controller="Usuario" asp-action="Configuracoes" class="btn btn-outline-light btn-sm px-2" title="Configurações">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.892 3.433-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.892-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.474l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                            </svg>
+                        </a>
 
                     </ul>
 
@@ -86,6 +92,7 @@
                     {
                         <span class="text-white" style="cursor: pointer; font-size: 14px;">Olá, @User.Identity.Name</span>
                         <a asp-controller="Usuario" asp-action="Sair" class="btn btn-outline-light btn-sm px-3">Sair</a>
+                        <a asp-controller="Carros" asp-action="Gerenciar" class="btn btn-outline-light btn-sm px-3">Gerenciar</a>
                         <a asp-controller="Usuario" asp-action="Configuracoes" class="btn btn-outline-light btn-sm px-2" title="Configurações">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                 <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
@@ -106,121 +113,7 @@
             @RenderBody()
 
 
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-
-        <!-- Indicadores -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9"></button>
-        </div>
-
-        <!-- Slides -->
-        <div class="carousel-inner">
-
-            <div class="carousel-item active" data-bs-interval="5000">
-                <img src="~/images/Byd/Byd_Dolphin_Cinza_Concessionaria.png" class="d-block w-100" alt="BYD Dolphin">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BYD Dolphin</h5>
-                    <p>Design moderno e tecnologia elétrica.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="~/images/Byd/Byd_Dolphin_Frente.png" class="d-block w-100" alt="BYD Dolphin Frente">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BYD Dolphin</h5>
-                    <p>Visual frontal marcante.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="~/images/Byd/Byd_King_frente_preto.png" class="d-block w-100" alt="BYD King">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BYD King</h5>
-                    <p>Sedã híbrido de alta eficiência.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="~/images/Byd/Byd_King_Lateral.png" class="d-block w-100" alt="BYD King Lateral">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BYD King</h5>
-                    <p>Elegância em todos os ângulos.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="~/images/Byd/Byd_King_Interior.png" class="d-block w-100" alt="Interior BYD King">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Interior Premium</h5>
-                    <p>Conforto e tecnologia para todos.</p>
-                </div>
-            </div>
-
-            <!-- Novos Slides -->
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="~/images/Byd/Byd_King_Lateral.png" class="d-block w-100" alt="BYD King Lateral">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BYD Dolphin</h5>
-                    <p>Linhas modernas e aerodinâmicas.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="~/images/Byd/Byd_King_Traseira.png" class="d-block w-100" alt="Byd King Traseira">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Interior Tecnológico</h5>
-                    <p>Painel digital e acabamento premium.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="~/images/Byd/Byd_Song_Plus_Lateral.png" class="d-block w-100" alt="Byd Song Plus Lateral">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BYD King</h5>
-                    <p>Design sofisticado na traseira.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="~/images/Byd/Byd_Song_Plus_Rua.png" class="d-block w-100" alt="BYD Song Plus">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BYD Seal</h5>
-                    <p>Performance e esportividade elétrica.</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="~/images/Byd/Byd_Song_Plus_Traseira.png" class="d-block w-100" alt="BYD Song Plus Traseira">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>BYD Seal</h5>
-                    <p>Visual esportivo e futurista.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Botões -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Próximo</span>
-        </button>
-
-    </div>
+    
 
 
     <footer class="border-top footer text-muted">

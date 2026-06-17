@@ -13,7 +13,7 @@ namespace ProjetoCarros.Repositorio
         public CarroRepositorio(IConfiguration config, IWebHostEnvironment env)
         {
             _connectionString = config.GetConnectionString("Conexao");
-            _env = _env;
+            _env = env;
         }
 
         //Parte da listagem de carros
@@ -51,7 +51,7 @@ namespace ProjetoCarros.Repositorio
         }
 
         //Criaçao de um carro
-        public void CriarCarro (Carro carro, IFormFile? imagem)
+        public void Criar (Carro carro, IFormFile? imagem)
         {
             // salva a imagem na pasta carros que esta dentro do wwwroot
             carro.Imagem = SalvarImagem(imagem);
@@ -59,7 +59,7 @@ namespace ProjetoCarros.Repositorio
             using var conn = new MySqlConnection(_connectionString);
             conn.Open();
 
-            var sql = @"INSERT INTO tb_carros(Nome_carro,Marca,Descicao,Imagem Categoria, Preco) VALUES (@nome, @marca, @descricao, @imagem, @categoria, @preco";
+            var sql = @"INSERT INTO tb_carros(Nome_carro,Marca,Descricao,Imagem, Categoria, Preco) VALUES (@nome, @marca, @descricao, @imagem, @categoria, @preco)";
             using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@nome", carro.Nome);
             cmd.Parameters.AddWithValue("@marca", carro.Marca);
@@ -71,7 +71,7 @@ namespace ProjetoCarros.Repositorio
         }
 
         //Update dos carros já existentes
-        public void EditarCarro (Carro carro, IFormFile? imagem)
+        public void Editar (Carro carro, IFormFile? imagem)
         {
             // So vai trocar de imagem se o adm enviou uma nova
             if(imagem!=null && imagem.Length>0)
@@ -103,7 +103,7 @@ namespace ProjetoCarros.Repositorio
 
         //exclusao do card de carros
 
-        public void DeletarCarro(int id)
+        public void Deletar(int id)
         {
             //vai buscar o carro pelo id antes de deletar para poder apagar a imagem do servidor
             var carro = BuscarPorId(id);
