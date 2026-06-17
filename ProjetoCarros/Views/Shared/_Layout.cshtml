@@ -39,9 +39,9 @@
                                 Modelos
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark border-0 rounded-0 border-top border-white border-2 mt-0" style="background-color: black;">
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Todos os Modelos</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Elétricos</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Index">Híbrido</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Carros" asp-action="TodosModelos">Todos os Modelos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Carros" asp-action="CarrosEletricos">Elétricos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Carros" asp-action="CarrosHibridos">Híbrido</a></li>
                             </ul>
                         </li>
 
@@ -51,8 +51,8 @@
                                 Estoque
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark border-0 rounded-0 border-top border-white border-2 mt-0" style="background-color: black;">
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Novos</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Seminovos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Carros" asp-action="Novos">Novos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Carros" asp-action="SemiNovos">Seminovos</a></li>
                             </ul>
                         </li>
 
@@ -74,9 +74,9 @@
                                 Sobre
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark border-0 rounded-0 border-top border-white border-2 mt-0" style="background-color: black;">
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Modelo">Quem Somos</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Modelo">Nossa Marca</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Modelo">Contato</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Sobre" asp-action="QuemSomos">Quem Somos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Sobre" asp-action="NossaMarca">Nossa Marca</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Sobre" asp-action="Contato">Contato</a></li>
                             </ul>
                         </li>
                         <a asp-controller="Usuario" asp-action="Configuracoes" class="btn btn-outline-light btn-sm px-2" title="Configurações">
