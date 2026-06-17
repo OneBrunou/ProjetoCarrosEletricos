@@ -89,6 +89,8 @@ namespace ProjetoCarros.Controllers
             if (User.FindFirst("NivelAcesso")?.Value != "Admin")
                 return RedirectToAction("AcessoNegado");
 
+            ModelState.Remove("Imagem");
+
             if (!ModelState.IsValid) 
                 return View(model);
 
@@ -114,7 +116,8 @@ namespace ProjetoCarros.Controllers
 
         public IActionResult TodosModelos()
         {
-            return View();
+            var carros = _carroRepositorio.ListarTodos();
+            return View(carros);
         }
         public IActionResult Novos()
         {
