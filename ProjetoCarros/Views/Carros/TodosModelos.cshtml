@@ -1,5 +1,55 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<ProjetoCarros.Models.Carro>
+
 @{
+	ViewData["Title"] = "Todos os carros";
 }
+
+<div class="container">
+	<div class="page-header">
+		<p class="page-label">Catálogo</p>
+		<h1 class="page-title">Todos os Modelos</h1>
+	</div>
+
+	@if (Model != null && Model.Any())
+	{
+		<div class="carros-grid">
+			@foreach (var carro in Model)
+			{
+				<div class="carro-card">
+					<div class="card-img-wrap">
+						@if (!string.IsNullOrEmpty(carro.Imagem))
+						{
+							<img src="@carro.Imagem" alt="@carro.Imagem" />
+						}
+						else
+						{
+							<div class="card-img-placeholder">
+								Sem Imagem
+							</div>
+						}
+						<span class="card-badge">@carro.Categoria</span>
+					</div>
+					<div class="card-body">
+						<span class="card-marca">@carro.Marca</span>
+						<span class="card-nome">@carro.Nome</span>
+						@if (!string.IsNullOrEmpty(carro.Descricao))
+						{
+							<p class="card-desc">@carro.Descricao</p>
+						}
+						<p class="card-preco">R$@carro.Preco.ToString("N2")<span>- 48x sem juros</span></p>
+					</div>
+					<div class="card-btn">
+						<a href="#" class="btn-alugar">Alugar</a>
+						<a href="#" class="btn-comprar">Comprar</a>
+					</div>
+				</div>
+			}
+		</div>
+	}
+	else
+	{
+		<div class="empty-state">
+			<p>Nenhum carro elétrico disponível no momento</p>
+		</div>
+	}
+</div>

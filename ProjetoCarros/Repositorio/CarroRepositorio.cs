@@ -44,10 +44,18 @@ namespace ProjetoCarros.Repositorio
             var sql = "SELECT * FROM tb_carros WHERE Id_carro = @id";
             using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@id", id);
-            using var reader = cmd.ExecuteReader();
 
-            if (reader.Read()) return MapearCarro(reader);
-            return null;
+            //A diferença é que com using (var reader = ...)
+            //com chaves, o reader é fechado e liberado no } final,
+            //antes do método retornar. Sem as chaves, o using var só libera quando sai do escopo do método inteiro,
+            //o que causa conflito quando o Deletar tenta abrir outra conexão logo depois.
+            using (var reader = cmd.ExecuteReader())
+            {
+                if (reader.Read()) return MapearCarro(reader);
+                return null;
+            }
+
+            
         }
 
         //Criaçao de um carro
@@ -112,7 +120,7 @@ namespace ProjetoCarros.Repositorio
             conn.Open();
 
             var sql = "DELETE FROM tb_carros WHERE Id_carro = @id";
-            using var cmd=new MySqlCommand(sql, conn);
+            using var cmd = new MySqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@id", id);
             cmd.ExecuteNonQuery();
         }
