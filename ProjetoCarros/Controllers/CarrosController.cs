@@ -50,7 +50,7 @@ namespace ProjetoCarros.Controllers
         }
         [Authorize]
         [HttpGet]
-        public IActionResult Cria() => View();
+        public IActionResult Criar() => View();
 
         [Authorize]
         [HttpPost]
