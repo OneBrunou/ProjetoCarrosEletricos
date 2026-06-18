@@ -94,5 +94,21 @@ namespace ProjetoCarros.Repositorio
             return null;
         }
 
+        public void Atualizar(Usuario usuario)
+        {
+            using var conn = new MySqlConnection(_connectionString);
+            conn.Open();
+
+
+            var sql = @"UPDATE tb_usuario SET Nome = @nome, Email = @email WHERE Id = @id";
+            using var cmd = new MySqlCommand(sql, conn);
+
+            cmd.Parameters.AddWithValue("@nome", usuario.Nome);
+            cmd.Parameters.AddWithValue("@email", usuario.Email);
+            cmd.Parameters.AddWithValue("@id", usuario.Id);
+
+            cmd.ExecuteNonQuery();
+        }
+
     }
 }
