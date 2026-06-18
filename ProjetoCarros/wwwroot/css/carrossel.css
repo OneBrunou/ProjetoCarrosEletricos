@@ -1,0 +1,80 @@
+﻿/* Remove o carousel-dark e aplica estilo próprio */
+#carouselHome .carousel-caption {
+    bottom: 60px;
+    text-align: left;
+    left: 8%;
+    right: auto;
+    max-width: 520px;
+}
+
+    #carouselHome .carousel-caption h5 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: -0.5px;
+        margin-bottom: 8px;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    #carouselHome .carousel-caption p {
+        font-size: 1rem;
+        color: rgba(255,255,255,0.85);
+        letter-spacing: 0.5px;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        margin: 0;
+    }
+
+/* Vinheta gradiente na parte inferior de cada slide */
+#carouselHome .carousel-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    background: linear-gradient( to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 50%, transparent 100% );
+    pointer-events: none;
+}
+
+/* Vinheta lateral esquerda sutil */
+#carouselHome .carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.45) 0%, transparent 100% );
+    pointer-events: none;
+    z-index: 1;
+}
+
+#carouselHome .carousel-caption {
+    z-index: 2; /* fica acima das vinhetas */
+}
+
+/* Indicadores brancos */
+#carouselHome .carousel-indicators [data-bs-target] {
+    background-color: rgba(255,255,255,0.5);
+    width: 24px;
+    height: 3px;
+    border: none;
+    border-radius: 0;
+}
+
+#carouselHome .carousel-indicators .active {
+    background-color: #fff;
+}
+
+/* Setas de navegação */
+#carouselHome .carousel-control-prev,
+#carouselHome .carousel-control-next {
+    width: 5%;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+#carouselHome:hover .carousel-control-prev,
+#carouselHome:hover .carousel-control-next {
+    opacity: 1;
+}
