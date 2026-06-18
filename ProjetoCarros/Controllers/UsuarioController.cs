@@ -104,7 +104,7 @@ namespace ProjetoCarros.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditarPefil(Usuario usuario)
+        public IActionResult EditarPerfil(Usuario usuario)
         {
             _usuarioRepositorio.Atualizar(usuario);
             return RedirectToAction("Configuracoes");
