@@ -93,6 +93,7 @@ namespace ProjetoCarros.Controllers
         {
             return View();
         }
+
         public IActionResult Configuracoes()
         {
             var usuarioId = int.Parse(
