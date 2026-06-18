@@ -95,7 +95,18 @@ namespace ProjetoCarros.Controllers
         }
         public IActionResult Configuracoes()
         {
-            return View();
+            var usuarioId = int.Parse(
+                User.FindFirst("UsuarioId").Value);
+
+            var usuario = _usuarioRepositorio.BuscarPorId(usuarioId);
+            return View(usuario);
+        }
+
+        [HttpPost]
+        public IActionResult EditarPefil(Usuario usuario)
+        {
+            _usuarioRepositorio.Atualizar(usuario);
+            return RedirectToAction("Configuracoes");
         }
     }
 }
