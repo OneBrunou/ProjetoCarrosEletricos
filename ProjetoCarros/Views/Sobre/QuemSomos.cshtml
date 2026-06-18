@@ -3,11 +3,17 @@
     ViewData["Title"] = "Quem Somos";
 }
 
-<section class="hero-banner position-relative overflow-hidden">
-    <img src="/images/carros/ImgFundoSobre.png"
-         alt=""
-         class="w-100 object-fit-cover"
-         style="height: 520px;" />
+<section class="position-relative overflow-hidden text-white"
+         style="background-image: url('/images/carros/ImgFundoSobre.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;">
+
+    <div class="position-absolute top-0 start-0 h-100"
+         style="width: 60%;
+        background: linear-gradient(to right, rgba(0,0,0,0.75) 60%, transparent 100%);
+        z-index: 0;">
+    </div>
 
     <div class="position-absolute top-50 end-0 translate-middle-y pe-5 text-white text-end">
         <p class="text-uppercase letter-spacing-wide text-light small mb-1">Projeto Carros</p>
@@ -17,15 +23,15 @@
 
 <section class="py-5 bg-white text-center">
     <div class="container">
-        <h2 class="fw-bold text-uppercase letter-spacing-wide mb-4">QUEM SOMOS</h2>
+        <h2 class="fw-bold text-uppercase letter-spacing-wide mb-4 text-black">QUEM SOMOS</h2>
 
-        <p class="mx-auto mb-3" style="max-width: 800px;">
+        <p class="mx-auto mb-3 text-black" style="max-width: 800px;">
             Na Geely Auto, acreditamos que todos merecem uma experiência de mobilidade excepcional.
             Combinamos segurança, tecnologia, inovação e design para tornar esses resultados acessíveis.
             Não estamos apenas fazendo carros, estamos criando uma maneira melhor de viver.
         </p>
 
-        <p class="mx-auto" style="max-width: 800px;">
+        <p class="mx-auto text-black " style="max-width: 800px;">
             Estamos permitindo que as pessoas explorem novos horizontes, possibilidades e perspectivas.
             Para que elas olhem para o mundo, para a vida e vejam o mundo por completo,
             com todos os seus detalhes.
