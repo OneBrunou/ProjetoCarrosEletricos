@@ -1,6 +1,15 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@section Scripts {
+    <script src="~/js/splash.js" asp-append-version="true"></script>
+}
+
+<div id="splash-overlay">
+    <div id="splash-logo">
+        <img src="~/images/logo.png" alt="Logo" />
+    </div>
+</div>
 
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
 
