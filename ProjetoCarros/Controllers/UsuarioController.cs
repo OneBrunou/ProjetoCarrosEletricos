@@ -54,7 +54,7 @@ namespace ProjetoCarros.Controllers
         public async Task<IActionResult> Sair()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Logar");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
