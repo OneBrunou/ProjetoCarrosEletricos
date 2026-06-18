@@ -106,6 +106,7 @@ namespace ProjetoCarros.Repositorio
             cmd.Parameters.AddWithValue("@imagem", carro.Imagem);
             cmd.Parameters.AddWithValue("@categoria", carro.Categoria);
             cmd.Parameters.AddWithValue("@preco", carro.Preco);
+            cmd.Parameters.AddWithValue("@id", carro.Id);
             cmd.ExecuteNonQuery();
         }
 
