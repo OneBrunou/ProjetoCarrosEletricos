@@ -6,10 +6,12 @@
     <title>@ViewData["Title"] - ProjetoCarros</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/splash.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjetoCarros.styles.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body style="font-family: 'Inter', sans-serif;">
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-black py-0" style="min-height: 75px; font-family: 'Inter', sans-serif;">
             <div class="container justify-content-center">
@@ -22,14 +24,8 @@
 
                 <div class="collapse navbar-collapse justify-content-center gap-3" id="mainNav">
 
-                    <a class="navbar-brand d-flex align-items-center gap-2 fw-semibold" asp-area="" asp-controller="Home" asp-action="Index">
-                        <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0" y="0" width="12" height="12" fill="#fff" rx="1" />
-                            <rect x="16" y="0" width="12" height="12" fill="#fff" rx="1" />
-                            <rect x="0" y="16" width="12" height="12" fill="#fff" rx="1" />
-                            <rect x="16" y="16" width="12" height="12" fill="#fff" rx="1" />
-                        </svg>
-                        PROJETO CARROS
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="~/images/logo.png" alt="Logo" style="height: 65px; width: auto;" />
                     </a>
 
                     <ul class="navbar-nav mb-2 mb-lg-0">
@@ -88,7 +84,7 @@
                     {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white px-3" href="#"
-                                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Gerenciar
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark border-0 rounded-0 border-top border-white border-2 mt-0" style="background-color: black;">
@@ -98,7 +94,6 @@
                             </ul>
                         </li>
                         <span class="text-white" style="cursor: pointer; font-size: 14px;">Olá, @User.Identity.Name</span>
-
                     }
                     else
                     {
@@ -112,9 +107,11 @@
 
     @RenderBody()
 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/splash.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
 </body>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-@await RenderSectionAsync("Scripts", required: false)
 </html>
