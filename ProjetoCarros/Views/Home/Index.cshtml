@@ -5,26 +5,28 @@
     <script src="~/js/splash.js" asp-append-version="true"></script>
 }
 
+<link rel="stylesheet" href="~/css/carrossel.css"/>
+
 <div id="splash-overlay">
     <div id="splash-logo">
         <img src="~/images/logo.png" alt="Logo" />
     </div>
 </div>
 
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<div id="carouselHome" class="carousel slide" data-bs-ride="carousel">
 
     <!-- Indicadores -->
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8"></button>
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="5"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="6"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="7"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="8"></button>
+        <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="9"></button>
     </div>
 
     <!-- Slides -->
@@ -55,7 +57,7 @@
         </div>
 
         <div class="carousel-item" data-bs-interval="5000">
-            <img src="~/images/carros/Byd_King_Interior.png" class="d-block w-100" alt="BYD King Lateral">
+            <img src="~/images/carros/Byd_King_Interior.png" class="d-block w-100" alt="BYD King Interior">
             <div class="carousel-caption d-none d-md-block">
                 <h5>BYD King</h5>
                 <p>Elegância em todos os ângulos.</p>
@@ -70,10 +72,8 @@
             </div>
         </div>
 
-        <!-- Novos Slides -->
-
         <div class="carousel-item" data-bs-interval="5000">
-            <img src="~/images/carros/Byd_King_Traseira.png" class="d-block w-100" alt="BYD King Lateral">
+            <img src="~/images/carros/Byd_King_Traseira.png" class="d-block w-100" alt="BYD King Traseira">
             <div class="carousel-caption d-none d-md-block">
                 <h5>BYD Dolphin</h5>
                 <p>Linhas modernas e aerodinâmicas.</p>
@@ -91,8 +91,8 @@
         <div class="carousel-item" data-bs-interval="5000">
             <img src="~/images/Byd/Byd_Song_Plus_Lateral.png" class="d-block w-100" alt="Byd Song Plus Lateral">
             <div class="carousel-caption d-none d-md-block">
-                <h5>BYD King</h5>
-                <p>Design sofisticado na traseira.</p>
+                <h5>BYD Song Plus</h5>
+                <p>Design sofisticado em cada detalhe.</p>
             </div>
         </div>
 
@@ -105,7 +105,7 @@
         </div>
 
         <div class="carousel-item" data-bs-interval="5000">
-            <img src="~/images/Byd/Byd_Song_Plus_Traseira.png" class="d-block w-100" alt="BYD Song Plus Traseira">
+            <img src="~/imagens/carros/9ef4e466-241c-415f-ba10-0df2c4cbb945.png" class="d-block w-100" alt="BYD Song Plus Traseira">
             <div class="carousel-caption d-none d-md-block">
                 <h5>BYD Seal</h5>
                 <p>Visual esportivo e futurista.</p>
@@ -115,12 +115,11 @@
     </div>
 
     <!-- Botões -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
         <span class="visually-hidden">Anterior</span>
     </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselHome" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
         <span class="visually-hidden">Próximo</span>
     </button>
