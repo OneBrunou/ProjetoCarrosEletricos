@@ -430,7 +430,8 @@ main {
     }
 
 select.form-control option {
-    background: #1a1a1a;
+    background: #fff;
+    color: #000;
 }
 
 textarea.form-control {
