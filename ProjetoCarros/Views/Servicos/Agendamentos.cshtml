@@ -1,4 +1,4 @@
-﻿@{
+ @{
     ViewData["Title"] = "Novo Agendamento";
 }
 <link rel="stylesheet" href="~/css/Agendamento.css" />
@@ -12,6 +12,7 @@
                 <h1 class="ag-titulo">NOVO AGENDAMENTO</h1>
                 <p class="ag-subtitulo">Marque um novo horário de atendimento</p>
 
+                <a asp-controller="Servicos" asp-action="Agendar" class="ag-btn-agendar">
                 <a asp-controller="Agendamento" asp-action="Agendar" class="ag-btn-agendar">
                     Agendar agora
                     <i class="bi bi-arrow-right"></i>
