@@ -104,9 +104,34 @@ namespace ProjetoCarros.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditarPerfil(Usuario usuario)
+
+        // Faz com que a claims seja resetada com as novas informaçoes
+        public async Task<IActionResult> EditarPerfil(Usuario usuario)
         {
             _usuarioRepositorio.Atualizar(usuario);
+
+            var usuarioAtualizado =
+                _usuarioRepositorio.BuscarPorId(usuario.Id);
+
+            await HttpContext.SignOutAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme);
+
+            var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, usuarioAtualizado.Nome),
+        new Claim(ClaimTypes.Email, usuarioAtualizado.Email),
+        new Claim("NivelAcesso", usuarioAtualizado.Nivel),
+        new Claim("UsuarioId", usuarioAtualizado.Id.ToString())
+    };
+
+            var claimsIdentity = new ClaimsIdentity(
+                claims,
+                CookieAuthenticationDefaults.AuthenticationScheme);
+
+            await HttpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity));
+
             return RedirectToAction("Configuracoes");
         }
     }

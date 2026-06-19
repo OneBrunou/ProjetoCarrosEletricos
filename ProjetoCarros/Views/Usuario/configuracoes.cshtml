@@ -9,8 +9,8 @@
 
     <div class="card shadow-sm p-4">
 
-        <h2 class="mb-1">@Model.Nome</h2>
-        <p class="text-muted">@Model.Email</p>
+        <h2 class="mb-1 text-dark">@Model.Nome</h2>
+        <p class="text-muted dark">@Model.Email</p>
 
         <hr />
 
@@ -36,9 +36,10 @@
                        placeholder="Digite apenas se desejar alterar" />
             </div>
 
-            <a asp-controller="Usuario" asp-action="Logar"  class="btn btn-dark">
+            <button type="submit" class="btn btn-dark">
                 Salvar Alterações
-            </a>
+            </button>
+         
 
             <a asp-action="DeletarConta"
                class="btn btn-danger ms-2">
