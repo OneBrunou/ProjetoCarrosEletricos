@@ -5,6 +5,16 @@
 @section Scripts {
     <script src="~/js/splash.js" asp-append-version="true"></script>
     <script src="~/js/CarroselVideo.js" asp-append-version="true"></script>
+
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/carrossel.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/frota-destaque.css" asp-append-version="true" />
+}
+
+
  
 
 }
@@ -32,11 +42,15 @@
     </div>
 </div>
 
+
+<!-- Carrossel -->
+
  
 
 
 <!-- Carrossel --!>
  
+
 <div id="carouselHome" class="carousel slide" data-bs-ride="false">
 
     <!-- Indicadores -->
@@ -57,6 +71,8 @@
     <!-- Slides -->
     <div class="carousel-inner">
 
+
+
  
 
 
@@ -73,6 +89,7 @@
                 <h1>Performance in the new Taycan</h1>
                 <p>Sinta a emoção de dirigir o futuro.</p>
                 <a asp-controller="Servicos" asp-action="Agendamentos" class="btn-test-drive">
+
         <!-- SLIDE 0: VÍDEO (primeiro) -->
         <div class="carousel-item active" data-bs-interval="false" id="slide-video" style="position: relative;">
             <video id="carouselVideo"
@@ -131,7 +148,8 @@
                     Agendar Test Drive
                 </a>
             </div>
-        </div>
+        </div> 
+        <!-- SLIDE 1 -->
 
 
 
@@ -240,12 +258,16 @@
 
 </div>
 
+<!-- Foco em Elétricos -->
+<section class="foco-eletricos-section">
+
 
 <!-- Foco em Elétricos -->
 <section class="foco-eletricos-section">
 
 
 <footer class="border-top footer text-muted">
+
 
     <div class="container">
         <h2 class="foco-eletricos-titulo">FOCO TOTAL EM MOBILIDADE ELÉTRICA</h2>
@@ -260,6 +282,7 @@
             treinada para te guiar com transparência por toda a jornada, da escolha do carro ao
             suporte técnico especializado no pós-venda.
         </p>
+
     </div>
 </section>
 
@@ -287,6 +310,35 @@
             </div>
         </div>
     </div>
+
+    </div>
+</section>
+
+<!-- Cards Elétricos / Híbridos -->
+<section class="frota-cards-section">
+    <div class="row g-0">
+        <div class="col-12 col-md-6">
+            <div class="frota-card frota-card-eletrico">
+                <img src="~/images/carros/Carroeletrico.jpg" class="frota-card-img" alt="Carros 100% Elétricos">
+                <div class="frota-card-overlay">
+                    <span class="frota-card-tag">100% ELÉTRICOS</span>
+                    <h3 class="frota-card-titulo">Energia pura, zero emissões</h3>
+                    <p class="frota-card-desc">Tecnologia 100% elétrica para quem quer estar à frente do seu tempo.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="frota-card frota-card-hibrido">
+                <img src="~/images/carros/CarroHibrido.jpg" class="frota-card-img" alt="Carros Híbridos">
+                <div class="frota-card-overlay">
+                    <span class="frota-card-tag">HÍBRIDOS</span>
+                    <h3 class="frota-card-titulo">O melhor dos dois mundos</h3>
+                    <p class="frota-card-desc">Autonomia estendida e eficiência sem abrir mão da performance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="frota-cards-botoes">
         <a asp-controller="Carros" asp-action="CarrosEletricos" class="btn-frota btn-frota-eletrico">Conferir Elétricos</a>
