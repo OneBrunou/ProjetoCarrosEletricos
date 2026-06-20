@@ -1,4 +1,8 @@
-﻿@{
+ 
+b@{
+
+
+ @{
     ViewData["Title"] = "Agendar Test-Drive";
     Layout = "_Layout";
 }
@@ -53,11 +57,18 @@
 
             <form id="loginForm">
                 <div class="ag-field">
+ 
                     <label>Email *</label>
                     <input type="email" id="loginEmail" placeholder="seu@email.com" required />
                 </div>
                 <div class="ag-field">
                     <label>Senha *</label>
+                    <label class="text-black">Email </label>
+                    <input type="email" id="loginEmail" placeholder="seu@email.com" required />
+                </div>
+                <div class="ag-field">
+                    <label class="text-black">Senha </label>
+ main
                     <input type="password" id="loginSenha" placeholder="Sua senha" required />
                 </div>
 
@@ -117,3 +128,9 @@
 </div>
 
 <script src="~/js/Agendar.js"></script>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
