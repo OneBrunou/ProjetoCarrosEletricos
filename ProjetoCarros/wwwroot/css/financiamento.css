@@ -7,7 +7,6 @@
     text-align: center;
 }
 
-<<<<<<< HEAD
     .financiamento-hero h1 {
         font-size: 2rem;
         font-weight: 700;
@@ -84,32 +83,83 @@
     }
 
 /* Coluna da direita: card de simulação */
-=======
 .financiamento-hero h1 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-.financiamento-hero p {
-    color: #b3b3b3;
-    font-size: 1rem;
-}
+    .financiamento-hero p {
+        color: #b3b3b3;
+        font-size: 1rem;
+    }
 
 .financiamento-container {
-    padding: 50px 0;
+    padding: 70px 0;
+    min-height: 75vh;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
->>>>>>> 7b9dca2f400dd6be6ad01df078f40ff6bafd60bd
+.financiamento-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+
+/* Coluna da esquerda: texto + ilustração */
+.financiamento-info {
+    color: #1a1a1a;
+}
+
+    .financiamento-info h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 22px;
+    }
+
+.lista-vantagens {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+    .lista-vantagens li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.05rem;
+        color: #333;
+        margin-bottom: 14px;
+    }
+
+    .lista-vantagens .check {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #0d0d0d;
+        color: #fff;
+        font-size: 0.8rem;
+        flex-shrink: 0;
+    }
+
+.ilustracao-carro {
+    width: 100%;
+    max-width: 380px;
+}
+
 .financiamento-card {
     background: #fff;
     border-radius: 14px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     padding: 32px;
     width: 100%;
-<<<<<<< HEAD
+    max-width: 620px;
 }
 
     .financiamento-card .form-group {
@@ -123,29 +173,6 @@
         color: #1a1a1a;
     }
 
-    .financiamento-card .form-select {
-        width: 100%;
-        padding: 12px 14px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        font-size: 1rem;
-        background: #fafafa;
-    }
-=======
-    max-width: 620px;
-}
-
-.financiamento-card .form-group {
-    margin-bottom: 28px;
-}
-
-.financiamento-card label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #1a1a1a;
-}
-
 .financiamento-card .form-select {
     width: 100%;
     padding: 12px 14px;
@@ -154,7 +181,7 @@
     font-size: 1rem;
     background: #fafafa;
 }
->>>>>>> 7b9dca2f400dd6be6ad01df078f40ff6bafd60bd
+
 
 /* Preview do carro selecionado */
 .carro-preview {
@@ -167,7 +194,6 @@
     margin-bottom: 28px;
 }
 
-<<<<<<< HEAD
     .carro-preview img {
         width: 110px;
         height: 70px;
@@ -184,7 +210,6 @@
         color: #555;
         font-weight: 600;
     }
-=======
 .carro-preview img {
     width: 110px;
     height: 70px;
@@ -192,16 +217,15 @@
     border-radius: 8px;
 }
 
-.carro-preview h3 {
-    font-size: 1.05rem;
-    margin: 0 0 4px;
-}
+    .carro-preview h3 {
+        font-size: 1.05rem;
+        margin: 0 0 4px;
+    }
 
 .carro-preview span {
     color: #555;
     font-weight: 600;
 }
->>>>>>> 7b9dca2f400dd6be6ad01df078f40ff6bafd60bd
 
 /* Sliders */
 input[type="range"] {
@@ -227,7 +251,6 @@ input[type="range"] {
     border-collapse: collapse;
 }
 
-<<<<<<< HEAD
     .tabela-financiamento td {
         padding: 12px 8px;
         border-bottom: 1px solid #eee;
@@ -270,7 +293,6 @@ input[type="range"] {
         .tabela-financiamento tr:hover td {
             color: #fff;
         }
-=======
 .tabela-financiamento td {
     padding: 12px 8px;
     border-bottom: 1px solid #eee;
@@ -306,7 +328,7 @@ input[type="range"] {
 .tabela-financiamento tr.destaque td:last-child {
     border-radius: 0 8px 8px 0;
 }
->>>>>>> 7b9dca2f400dd6be6ad01df078f40ff6bafd60bd
+
 
 .aviso-financiamento {
     margin-top: 18px;
@@ -318,7 +340,6 @@ input[type="range"] {
 .d-none {
     display: none !important;
 }
-<<<<<<< HEAD
 
 /* Responsivo: empilha em telas menores */
 @media (max-width: 900px) {
@@ -339,5 +360,3 @@ input[type="range"] {
         margin: 0 auto;
     }
 }
-=======
->>>>>>> 7b9dca2f400dd6be6ad01df078f40ff6bafd60bd
