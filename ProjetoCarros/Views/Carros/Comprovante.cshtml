@@ -285,7 +285,7 @@
                     <span class="ticket-retirada-data">@Model.DataRetirada.ToString("dd 'de' MMMM 'de' yyyy")</span>
                 </div>
                 <div class="ticket-total">
-                    <span class="ticket-total-label">Total pago</span>
+                    <span class="ticket-total-label">Total a ser pago</span>
                     <span class="ticket-total-valor">R$ @Model.Valor.ToString("N2")</span>
                 </div>
             </div>
@@ -293,7 +293,7 @@
         </div>
 
         <div class="ticket-actions">
-            <a asp-controller="Carros" asp-action="TodosOsModelos" class="btn-voltar-catalogo">
+            <a asp-controller="Carros" asp-action="TodosModelos" class="btn-voltar-catalogo">
                 Voltar ao catálogo
             </a>
             <button onclick="baixarPdf()" class="btn-baixar-pdf" id="btnBaixar">
