@@ -7,7 +7,6 @@
     text-align: center;
 }
 
-<<<<<<< HEAD
     .financiamento-hero h1 {
         font-size: 2rem;
         font-weight: 700;
@@ -84,32 +83,12 @@
     }
 
 /* Coluna da direita: card de simulação */
-=======
-.financiamento-hero h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.financiamento-hero p {
-    color: #b3b3b3;
-    font-size: 1rem;
-}
-
-.financiamento-container {
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-}
-
->>>>>>> 7b9dca2f400dd6be6ad01df078f40ff6bafd60bd
 .financiamento-card {
     background: #fff;
     border-radius: 14px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     padding: 32px;
     width: 100%;
-<<<<<<< HEAD
 }
 
     .financiamento-card .form-group {
@@ -131,30 +110,6 @@
         font-size: 1rem;
         background: #fafafa;
     }
-=======
-    max-width: 620px;
-}
-
-.financiamento-card .form-group {
-    margin-bottom: 28px;
-}
-
-.financiamento-card label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #1a1a1a;
-}
-
-.financiamento-card .form-select {
-    width: 100%;
-    padding: 12px 14px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    background: #fafafa;
-}
->>>>>>> 7b9dca2f400dd6be6ad01df078f40ff6bafd60bd
 
 /* Preview do carro selecionado */
 .carro-preview {
@@ -167,7 +122,6 @@
     margin-bottom: 28px;
 }
 
-<<<<<<< HEAD
     .carro-preview img {
         width: 110px;
         height: 70px;
@@ -184,24 +138,6 @@
         color: #555;
         font-weight: 600;
     }
-=======
-.carro-preview img {
-    width: 110px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.carro-preview h3 {
-    font-size: 1.05rem;
-    margin: 0 0 4px;
-}
-
-.carro-preview span {
-    color: #555;
-    font-weight: 600;
-}
->>>>>>> 7b9dca2f400dd6be6ad01df078f40ff6bafd60bd
 
 /* Sliders */
 input[type="range"] {
@@ -227,7 +163,6 @@ input[type="range"] {
     border-collapse: collapse;
 }
 
-<<<<<<< HEAD
     .tabela-financiamento td {
         padding: 12px 8px;
         border-bottom: 1px solid #eee;
@@ -245,7 +180,7 @@ input[type="range"] {
         }
 
     .tabela-financiamento tr.destaque {
-        background-color: #0077d0;
+        background: #0060d5;
     }
 
         .tabela-financiamento tr.destaque td {
@@ -269,44 +204,7 @@ input[type="range"] {
 
         .tabela-financiamento tr:hover td {
             color: #fff;
-        }
-=======
-.tabela-financiamento td {
-    padding: 12px 8px;
-    border-bottom: 1px solid #eee;
-    font-size: 0.95rem;
-}
-
-.tabela-financiamento td:first-child {
-    color: #666;
-}
-
-.tabela-financiamento td:last-child {
-    text-align: right;
-    font-weight: 600;
-    color: #1a1a1a;
-}
-
-.tabela-financiamento tr.destaque {
-    background: #0d0d0d;
-}
-
-.tabela-financiamento tr.destaque td {
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border-bottom: none;
-}
-
-.tabela-financiamento tr.destaque td:first-child {
-    color: #ccc;
-    border-radius: 8px 0 0 8px;
-}
-
-.tabela-financiamento tr.destaque td:last-child {
-    border-radius: 0 8px 8px 0;
-}
->>>>>>> 7b9dca2f400dd6be6ad01df078f40ff6bafd60bd
+        }   
 
 .aviso-financiamento {
     margin-top: 18px;
@@ -318,7 +216,6 @@ input[type="range"] {
 .d-none {
     display: none !important;
 }
-<<<<<<< HEAD
 
 /* Responsivo: empilha em telas menores */
 @media (max-width: 900px) {
@@ -339,5 +236,3 @@ input[type="range"] {
         margin: 0 auto;
     }
 }
-=======
->>>>>>> 7b9dca2f400dd6be6ad01df078f40ff6bafd60bd
